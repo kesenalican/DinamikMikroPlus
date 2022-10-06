@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9F36C25-A0A2-4EED-BE8B-94805AAF794C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BateEkranDeneme</RootNamespace>
+    <AssemblyName>BateEkranDeneme</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\Downloads\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\DataProvider.cs" />
+    <Compile Include="Classes\DBManager.cs" />
+    <Compile Include="Classes\DBManagerFactory.cs" />
+    <Compile Include="Classes\EvrakPrimaryKey.cs" />
+    <Compile Include="Classes\IDBManager.cs" />
+    <Compile Include="Classes\Inifile.cs" />
+    <Compile Include="Classes\SqlHelper.cs" />
+    <Compile Include="Common\ExcelFormat.cs" />
+    <Compile Include="Common\PdfFormat.cs" />
+    <Compile Include="DinamikMikroPlusDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DinamikMikroPlusDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DinamikMikroPlusDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DinamikMikroPlusDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DinamikMikroPlusDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DinamikMikroPlusDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAlisFaturalardanSatisFiyatiOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAlisFaturalardanSatisFiyatiOlustur.Designer.cs">
+      <DependentUpon>FormAlisFaturalardanSatisFiyatiOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAlislardanFiyatFarki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAlislardanFiyatFarki.Designer.cs">
+      <DependentUpon>FormAlislardanFiyatFarki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAnaEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAnaEkran.Designer.cs">
+      <DependentUpon>FormAnaEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFiyatiDegisenStoklar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFiyatiDegisenStoklar.Designer.cs">
+      <DependentUpon>FormFiyatiDegisenStoklar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGenelStokKarlılık.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGenelStokKarlılık.Designer.cs">
+      <DependentUpon>FormGenelStokKarlılık.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGiris.Designer.cs">
+      <DependentUpon>FormGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormInsert.Designer.cs">
+      <DependentUpon>FormInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPazarPayiRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPazarPayiRaporu.Designer.cs">
+      <DependentUpon>FormPazarPayiRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSiparisDuzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSiparisDuzenleme.Designer.cs">
+      <DependentUpon>FormSiparisDuzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSiparisHazirlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSiparisHazirlama.Designer.cs">
+      <DependentUpon>FormSiparisHazirlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSiparisIzleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSiparisIzleme.Designer.cs">
+      <DependentUpon>FormSiparisIzleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStokDepoDetaylari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStokDepoDetaylari.Designer.cs">
+      <DependentUpon>FormStokDepoDetaylari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStokKartDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStokKartDuzenle.Designer.cs">
+      <DependentUpon>FormStokKartDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStokKartKontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStokKartKontrol.Designer.cs">
+      <DependentUpon>FormStokKartKontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStokKartlariBirlestirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStokKartlariBirlestirme.Designer.cs">
+      <DependentUpon>FormStokKartlariBirlestirme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStokYonetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStokYonetimi.Designer.cs">
+      <DependentUpon>FormStokYonetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmWaiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmWaiting.designer.cs">
+      <DependentUpon>FrmWaiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormAlisFaturalardanSatisFiyatiOlustur.resx">
+      <DependentUpon>FormAlisFaturalardanSatisFiyatiOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAlislardanFiyatFarki.resx">
+      <DependentUpon>FormAlislardanFiyatFarki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAnaEkran.resx">
+      <DependentUpon>FormAnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFiyatiDegisenStoklar.resx">
+      <DependentUpon>FormFiyatiDegisenStoklar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGenelStokKarlılık.resx">
+      <DependentUpon>FormGenelStokKarlılık.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGiris.resx">
+      <DependentUpon>FormGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormInsert.resx">
+      <DependentUpon>FormInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPazarPayiRaporu.resx">
+      <DependentUpon>FormPazarPayiRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSiparisDuzenleme.resx">
+      <DependentUpon>FormSiparisDuzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSiparisHazirlama.resx">
+      <DependentUpon>FormSiparisHazirlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSiparisIzleme.resx">
+      <DependentUpon>FormSiparisIzleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStokDepoDetaylari.resx">
+      <DependentUpon>FormStokDepoDetaylari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStokKartDuzenle.resx">
+      <DependentUpon>FormStokKartDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStokKartKontrol.resx">
+      <DependentUpon>FormStokKartKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStokKartlariBirlestirme.resx">
+      <DependentUpon>FormStokKartlariBirlestirme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStokYonetimi.resx">
+      <DependentUpon>FormStokYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmWaiting.resx">
+      <DependentUpon>FrmWaiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DinamikMikroPlusDataSet.xsc">
+      <DependentUpon>DinamikMikroPlusDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DinamikMikroPlusDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DinamikMikroPlusDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DinamikMikroPlusDataSet.xss">
+      <DependentUpon>DinamikMikroPlusDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DinamikMikroPlusDataSet1.xsc">
+      <DependentUpon>DinamikMikroPlusDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DinamikMikroPlusDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DinamikMikroPlusDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DinamikMikroPlusDataSet1.xss">
+      <DependentUpon>DinamikMikroPlusDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DinamikMikroPlusDataSet2.xsc">
+      <DependentUpon>DinamikMikroPlusDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DinamikMikroPlusDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DinamikMikroPlusDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DinamikMikroPlusDataSet2.xss">
+      <DependentUpon>DinamikMikroPlusDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

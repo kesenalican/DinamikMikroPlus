@@ -1,0 +1,3 @@
+C:\Users\Alican\Documents\Visual Studio 2010\Projects\DinamikMikroPlus\DinamikMikroPlus\bin\Debug\BateEkranDeneme.exe.config
+C:\Users\Alican\Documents\Visual Studio 2010\Projects\DinamikMikroPlus\DinamikMikroPlus\obj\x86\Debug\BateEkranDeneme.exe
+C:\Users\Alican\Documents\Visual Studio 2010\Projects\DinamikMikroPlus\DinamikMikroPlus\obj\x86\Debug\BateEkranDeneme.pdb
